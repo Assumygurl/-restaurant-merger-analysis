@@ -1,0 +1,93 @@
+TWEET 1:
+🧵 I just finished my first data analytics portfolio project and I'm so proud of it!
+
+I built an end-to-end restaurant chain merger analysis platform using Python, SQL, Streamlit and machine learning.
+
+Here's everything I built in one thread 👇
+
+#DataAnalytics #Python #DataScience
+
+---
+
+TWEET 2:
+📊 The Problem:
+Two restaurant chains (ABC & XYZ) just merged.
+
+Leadership needs a 3-year plan but the data is messy, inconsistent and spread across two Excel files.
+
+My job: clean it, analyse it, and tell the story.
+
+40,000 transactions. 544 locations. 48 states. Let's go 🔥
+
+---
+
+TWEET 3:
+🧹 Step 1 — Data Cleaning
+
+Found these issues in the raw data:
+❌ 1,952 corrupted dates in ABC (9.76% of data)
+❌ 100% null cost column in XYZ
+❌ Inconsistent category names across both files
+
+Fixed everything with Python and documented every change.
+
+Clean data = trustworthy analysis ✅
+
+---
+
+TWEET 4:
+📈 Step 2 — Key Findings
+
+After cleaning and analysing 40,000 records:
+
+🏆 Pizza = most profitable category ($33M)
+🌍 Florida alone = 21% of total profit
+🌸 Spring = $105M revenue | Fall = only $4M
+🚗 Carry Out = most popular purchase method
+👩 Female customers = higher avg order value
+
+---
+
+TWEET 5:
+🤖 Step 3 — Live Interactive Dashboard
+
+Built a full Streamlit dashboard with:
+✅ 4 pages (Overview, Products, Regional, AI Query)
+✅ Live filters by chain, season, gender
+✅ Natural language query feature
+✅ Plotly interactive charts
+
+Type a question → get data + chart instantly 🚀
+
+---
+
+TWEET 6:
+🔮 Step 4 — Revenue Forecasting
+
+Used Facebook Prophet ML model to forecast the next 12 months of revenue.
+
+Trained on 18 months of 2024-2025 data.
+95% confidence intervals included.
+Spring 2026 projected as peak season.
+
+This is what leadership needs for the 3-year plan 📊
+
+---
+
+TWEET 7:
+📝 Final Deliverables:
+
+✅ Cleaned dataset (40,000 rows)
+✅ SQLite database (4 tables)
+✅ 14 professional charts
+✅ Auto-generated Word report
+✅ 19-slide PowerPoint presentation
+✅ Live Streamlit dashboard
+✅ 12-month revenue forecast
+
+All generated automatically from Python scripts 🐍
+
+Full project on GitHub 👇
+[GitHub Link]
+
+#Python #SQL #DataAnalytics #Streamlit #Portfolio #DataScience #JobSearch

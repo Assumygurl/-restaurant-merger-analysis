@@ -1,0 +1,50 @@
+============================================================
+DATA CLEANING PIPELINE — ABC & XYZ Restaurant Chains
+============================================================
+
+[1] Loading raw data...
+    ABC raw shape : (20000, 22)
+    XYZ raw shape : (20000, 23)
+
+[2] Adding source identifier column...
+
+[3] Cleaning ABC dataset...
+    [DATE] 1952 corrupt dates (1970 epoch errors) set to NaT.
+    [DATE] These represent 9.76% of ABC rows — documented as data integrity issue.
+    [DTYPE] order_number converted from object → Int64
+    [CATEGORY] ABC item_category standardised: ['Appetizers', 'Beverages', 'Pasta', 'Pizza', 'Salads', 'Sandwiches']
+    [DERIVED] Added: time_of_day, order_month, order_month_name, order_year, season
+    [DERIVED] Added readable labels: coupon_used, alcohol_purchased, has_children, gender
+
+[4] Cleaning XYZ dataset...
+    [DROP] 'item_product_cost' dropped — 100% null (20,000 missing values).
+    [DATE] XYZ date range: 2018-01-01 → 2019-06-01
+    [DATE] Suspicious dates (pre-2015): 0
+    [CATEGORY] XYZ item_category standardised: ['Appetizers', 'Beverages', 'Dessert', 'Pasta', 'Pizza', 'Salads', 'Sandwiches']
+    [DERIVED] Added same derived columns as ABC
+
+[5] Aligning columns for merge...
+    ABC clean columns: 28
+    XYZ clean columns: 28
+
+[6] Merging ABC + XYZ into single dataset...
+    Merged shape: (40000, 28)
+    ABC rows: 20000 | XYZ rows: 20000
+
+[7] Final validation of merged dataset...
+    Total null values per column:
+      order_number: 234 nulls (0.58%)
+      order_purchase_date: 1952 nulls (4.88%)
+      order_purchase_time: 1952 nulls (4.88%)
+      order_month: 1952 nulls (4.88%)
+      order_month_name: 1952 nulls (4.88%)
+      order_year: 1952 nulls (4.88%)
+      season: 1952 nulls (4.88%)
+
+    item_category values in merged: ['Appetizers', 'Beverages', 'Dessert', 'Pasta', 'Pizza', 'Salads', 'Sandwiches']
+    chain values: ['ABC' 'XYZ']
+    Date range: 2018-01-01 00:00:00 → 2019-06-01 00:00:00
+    Total rows: 40,000
+    Total columns: 28
+
+[8] Saving outputs...
